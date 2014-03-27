@@ -2,7 +2,7 @@ class kp::blog (
   $domain = $kp::params::domain,
   $port = $kp::params::port,
   $docroot = $kp::params::docroot,
-) {
+) inherits kp::params {
   host { $domain:
     ip => $::ipaddress,
   }
